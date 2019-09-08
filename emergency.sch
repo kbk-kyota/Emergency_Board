@@ -18313,7 +18313,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </library>
 <library name="XT60_Connecotr">
 <packages>
-<package name="AMASS_XT90PW_M">
+<package name="AMASS_XT90PW_F">
 <wire x1="-10.4" y1="-8" x2="10.4" y2="-8" width="0.127" layer="51"/>
 <wire x1="10.4" y1="19.1" x2="-10.4" y2="19.1" width="0.127" layer="21"/>
 <wire x1="-10.5" y1="19.1" x2="10.5" y2="19.1" width="0.05" layer="39"/>
@@ -18337,7 +18337,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="9.75" y1="6.3" x2="9.75" y2="8" width="0" layer="46"/>
 <wire x1="9.75" y1="8" x2="9.3" y2="8" width="0" layer="46"/>
 </package>
-<package name="AMASS_XT60PW_F">
+<package name="AMASS_XT60PW_M">
 <wire x1="-7.75" y1="-7.85" x2="7.75" y2="-7.85" width="0.127" layer="51"/>
 <wire x1="-7.75" y1="-7.85" x2="-6" y2="-7.85" width="0.127" layer="21"/>
 <wire x1="7.75" y1="-7.85" x2="6" y2="-7.85" width="0.127" layer="21"/>
@@ -18373,16 +18373,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </package>
 </packages>
 <symbols>
-<symbol name="M">
-<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<text x="-5.08745" y="5.72338125" size="1.780609375" layer="95">&gt;NAME</text>
-<text x="-5.0882" y="-7.632290625" size="1.78086875" layer="96">&gt;VALUE</text>
-<pin name="GND" x="-10.16" y="2.54" length="middle" direction="pas"/>
-<pin name="2" x="-10.16" y="-2.54" length="middle" direction="pas"/>
-</symbol>
 <symbol name="F">
 <wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
 <wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
@@ -18393,14 +18383,24 @@ In this library the device names are the same as the pin names of the symbols, t
 <pin name="1" x="-10.16" y="2.54" length="middle" direction="pas"/>
 <pin name="GND" x="-10.16" y="-2.54" length="middle" direction="pas"/>
 </symbol>
+<symbol name="M">
+<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<text x="-5.08745" y="5.72338125" size="1.780609375" layer="95">&gt;NAME</text>
+<text x="-5.0882" y="-7.632290625" size="1.78086875" layer="96">&gt;VALUE</text>
+<pin name="GND" x="-10.16" y="2.54" length="middle" direction="pas"/>
+<pin name="2" x="-10.16" y="-2.54" length="middle" direction="pas"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="XT90PW_M">
+<deviceset name="XT90PW_F">
 <gates>
 <gate name="G$1" symbol="M" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="AMASS_XT90PW_M">
+<device name="" package="AMASS_XT90PW_F">
 <connects>
 <connect gate="G$1" pin="2" pad="1"/>
 <connect gate="G$1" pin="GND" pad="2"/>
@@ -18411,12 +18411,12 @@ In this library the device names are the same as the pin names of the symbols, t
 </device>
 </devices>
 </deviceset>
-<deviceset name="XT60PW-F">
+<deviceset name="XT60PW-M">
 <gates>
 <gate name="G$1" symbol="F" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="AMASS_XT60PW_F">
+<device name="" package="AMASS_XT60PW_M">
 <connects>
 <connect gate="G$1" pin="1" pad="2"/>
 <connect gate="G$1" pin="GND" pad="1"/>
@@ -22674,9 +22674,9 @@ Source: AVX .. aphvc.pdf</description>
 <parts>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
-<part name="U$11" library="XT60_Connecotr" deviceset="XT90PW_M" device=""/>
+<part name="U$11" library="XT60_Connecotr" deviceset="XT90PW_F" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND2" device=""/>
-<part name="U$12" library="XT60_Connecotr" deviceset="XT60PW-F" device=""/>
+<part name="U$12" library="XT60_Connecotr" deviceset="XT60PW-M" device=""/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND2" device=""/>
 <part name="Q2" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="BUZ11" device="BH" package3d_urn="urn:adsk.eagle:package:29490/1"/>
 <part name="U1" library="relay" deviceset="V23134J1052D642" device=""/>
@@ -22724,13 +22724,13 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="47k"/>
-<part name="U$3" library="XT60_Connecotr" deviceset="XT60PW-F" device=""/>
+<part name="U$3" library="XT60_Connecotr" deviceset="XT60PW-M" device=""/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND2" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="U2" library="relay" deviceset="V23134J1052D642" device=""/>
-<part name="U$4" library="XT60_Connecotr" deviceset="XT60PW-F" device=""/>
+<part name="U$4" library="XT60_Connecotr" deviceset="XT60PW-M" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND2" device=""/>
-<part name="U$5" library="XT60_Connecotr" deviceset="XT60PW-F" device=""/>
+<part name="U$5" library="XT60_Connecotr" deviceset="XT60PW-M" device=""/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND2" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDIO" device=""/>
@@ -22804,9 +22804,9 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="SUPPLY1" gate="G$1" x="149.86" y="63.5" smashed="yes" rot="R270">
 <attribute name="VALUE" x="146.685" y="65.913" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="U2" gate="A" x="73.66" y="99.06" smashed="yes" rot="R180">
-<attribute name="VALUE" x="72.39" y="96.139" size="1.778" layer="96" rot="R180"/>
-<attribute name="PART" x="72.39" y="93.98" size="1.778" layer="95" rot="R180"/>
+<instance part="U2" gate="A" x="83.82" y="86.36" smashed="yes" rot="R180">
+<attribute name="VALUE" x="82.55" y="83.439" size="1.778" layer="96" rot="R180"/>
+<attribute name="PART" x="82.55" y="81.28" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="U2" gate="B" x="109.22" y="91.44" smashed="yes">
 <attribute name="PART" x="106.68" y="88.9" size="1.778" layer="95" rot="R90"/>
@@ -22915,25 +22915,16 @@ Source: AVX .. aphvc.pdf</description>
 <label x="38.1" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="+12V" class="0">
-<segment>
-<pinref part="P+2" gate="1" pin="+12V"/>
-<pinref part="U2" gate="A" pin="2"/>
-<wire x1="73.66" y1="106.68" x2="73.66" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U2" gate="A" pin="1"/>
-<pinref part="U1" gate="A" pin="2"/>
-<wire x1="73.66" y1="91.44" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="Q2" gate="1" pin="D"/>
 <pinref part="U1" gate="A" pin="1"/>
-<wire x1="73.66" y1="81.28" x2="73.66" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="81.28" x2="73.66" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="U2" gate="A" pin="1"/>
+<wire x1="73.66" y1="78.74" x2="73.66" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="78.74" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="78.74" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
+<junction x="73.66" y="78.74"/>
 </segment>
 </net>
 <net name="OUT_POWER_A" class="0">
@@ -22951,6 +22942,16 @@ Source: AVX .. aphvc.pdf</description>
 <label x="99.06" y="83.82" size="1.778" layer="95" rot="R180"/>
 <pinref part="U1" gate="B" pin="P"/>
 <wire x1="99.06" y1="86.36" x2="99.06" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+12V" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="2"/>
+<pinref part="U1" gate="A" pin="2"/>
+<wire x1="83.82" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="1" pin="+12V"/>
+<wire x1="73.66" y1="91.44" x2="73.66" y2="106.68" width="0.1524" layer="91"/>
+<junction x="73.66" y="91.44"/>
 </segment>
 </net>
 </nets>
